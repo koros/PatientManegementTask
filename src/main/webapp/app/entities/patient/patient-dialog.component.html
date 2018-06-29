@@ -12,7 +12,7 @@
             <input type="text" class="form-control" id="id" name="id"
                    [(ngModel)]="patient.id" readonly />
         </div>
-        <div class="form-group">
+        <!--<div class="form-group">
             <label class="form-control-label" jhiTranslate="patientManegementTaskApp.patient.surname" for="field_surname">Surname</label>
             <input type="text" class="form-control" name="surname" id="field_surname"
                 [(ngModel)]="patient.surname" required minlength="3"/>
@@ -51,7 +51,7 @@
                     <button type="button" class="btn btn-secondary" (click)="dateOfBirthDp.toggle()"><i class="fa fa-calendar"></i></button>
                 </span>
             </div>
-        </div>
+        </div>-->
         <div class="form-group">
             <label class="form-control-label" jhiTranslate="patientManegementTaskApp.patient.county" for="field_county">County</label>
             <input type="text" class="form-control" name="county" id="field_county"
@@ -122,7 +122,7 @@
             <label class="form-control-label" jhiTranslate="patientManegementTaskApp.patient.nextOfKin" for="field_nextOfKin">Next Of Kin</label>
             <select class="form-control" id="field_nextOfKin" name="nextOfKin" [(ngModel)]="patient.nextOfKin" >
                 <option [ngValue]="null"></option>
-                <option [ngValue]="nextOfKinOption.id === patient.nextOfKin?.id ? patient.nextOfKin : nextOfKinOption" *ngFor="let nextOfKinOption of nextofkins; trackBy: trackNextOfKinById">{{nextOfKinOption.id}}</option>
+                <option [ngValue]="nextOfKinOption.id === patient.nextOfKin?.id ? patient.nextOfKin : nextOfKinOption" *ngFor="let nextOfKinOption of nextofkins; trackBy: trackNextOfKinById">{{nextOfKinOption.idNumber}} {{nextOfKinOption.surname}} {{nextOfKinOption.otherNames}}</option>
             </select>
         </div>
     </div>
