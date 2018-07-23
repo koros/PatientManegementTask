@@ -103,6 +103,9 @@ test {
     // see https://github.com/jhipster/generator-jhipster/pull/2771 and https://github.com/jhipster/generator-jhipster/pull/4484
     // ignoreFailures true
     reports.html.enabled = false
+
+    minHeapSize = "128m"
+    maxHeapSize = "512m"
 }
 
 task testReport(type: TestReport) {
