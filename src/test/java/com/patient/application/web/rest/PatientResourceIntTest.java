@@ -411,7 +411,7 @@ public class PatientResourceIntTest {
 
         // Validate the database is empty
         List<Patient> patientList = patientRepository.findAll();
-        assertThat(patientList).hasSize(databaseSizeBeforeDelete - 1);
+        assertThat(patientList).hasSize(databaseSizeBeforeDelete); // should remain the same we are only setting deleted flag
     }
 
     @Test
