@@ -39,6 +39,10 @@ jobs:
           paths:
             - ~/.m2
           key: v1-dependencies-{{ checksum "build.gradle" }}
+      # run tests and package
+      - run:
+          name: chmod permissions
+          command: chmod +x ./gradlew
 
       # run tests and package
       - run: ./gradlew clean test
